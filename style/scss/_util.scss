@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'gilroy';
 }
 html,body{
     width:100%;
@@ -11,4 +12,11 @@ html,body{
 main{
     width:100%;
     min-height:100vh;
+}
+
+@mixin flex($justify:space-between,$align:center,$dir:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
 }
