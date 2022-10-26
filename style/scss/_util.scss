@@ -14,6 +14,19 @@ main{
     min-height:100vh;
 }
 
+:root{
+  --navText:#fff;
+  --card:#fff;
+  --actionClr1:#FF7F31;
+
+
+}
+
+$colors:(
+    'navText':var(--navText),
+);
+
+
 @mixin flex($justify:space-between,$align:center,$dir:row) {
     display: flex;
     justify-content: $justify;
