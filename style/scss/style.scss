@@ -32,6 +32,7 @@ nav{
             color:var(--navText);
             text-decoration: none;
             letter-spacing: .1em;
+            font-size: .9em;
         }
 
         // background-color: blue;
@@ -44,7 +45,7 @@ nav{
             padding: .5em 1em;
             border-radius: 1em;
             border: none;
-            letter-spacing: .1em;
+            // letter-spacing: .1em;
             cursor: pointer;
 
             &:nth-child(1){
