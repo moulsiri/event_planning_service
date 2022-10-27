@@ -15,21 +15,22 @@ main{
 }
 
 :root{
+    // --navText:#000;
   --navText:#fff;
   --card:#fff;
   --actionClr1:#FF7F31;
 
 
 }
-
-$colors:(
-    'navText':var(--navText),
-);
-
-
 @mixin flex($justify:space-between,$align:center,$dir:row) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $dir;
+}
+
+@mixin mobile($mobile){
+    @media(max-width:$mobile){
+        @content;
+    }
 }
