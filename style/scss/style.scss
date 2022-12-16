@@ -67,8 +67,9 @@ nav{
         height: inherit;
         @include flex;
         button{
-            padding: .5em 1em;
+            padding: 1em 1.5em;
             border-radius: 1em;
+            letter-spacing: .1em;
             border: none;
             margin-left: 1em;
             // letter-spacing: .1em;
@@ -117,58 +118,64 @@ nav{
 
 #hero{
     width:100%;
-    min-height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1500754088824-ce0582cfe45f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80);
+    min-height: 90vh;
+    background-image: url(https://images.unsplash.com/photo-1600324832899-4031cd16c99c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    // background-color: red;
   
     #hlft{
-        width:60%;
+        width:100%;
         min-height: inherit;
-        // background-color: rgba(255, 255, 255, 0.301);
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.555);
+        // backdrop-filter: blur(10px);
         display: flex;
         align-items: center;
         justify-content: center;
-        @include mobile(950px){
-        width: 80%;
-        }
-        @include mobile(700px){
-            width: 100%;
-            // padding: 0 1em;
-            backdrop-filter: blur(5px);
+        
+        // @include mobile(700px){
+        //     width: 100%;
+        //     // padding: 0 1em;
+        //     backdrop-filter: blur(5px);
 
-        }
+        // }
         #heroMid{
             width: 85%;
             height: 52vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
             margin-left: 1em;
-            @include mobile(950px){
-                width: 95%;
-                height: 45vh;
-            margin-left: 0;
+            // background-color: red;
+            // @include mobile(950px){
+            //     width: 95%;
+            //     height: 45vh;
+            // margin-left: 0;
 
-                } 
-                @include mobile(700px){
-                    height: 45vh;
-                    // font-size: 12px;
-                }
-                @include mobile(400px){
-                    font-size: 12px;
-                }
+            //     } 
+                // @include mobile(700px){
+                //     height: 45vh;
+                //     // font-size: 12px;
+                // }
+                // @include mobile(400px){
+                //     font-size: 12px;
+                // }
             // background-color: red;
             h1{
                 font-size: 2.5em;
                 color: #fff;
                 width: 80%;
                 font-weight: 600;
+                text-align: center;
                 @include mobile(700px){
-                    width: 95%;
+                    font-size: 2em;
+                    width: 90%;
+                }
+                @include mobile(550px){
+                    font-size: 1.5em;
                 }
             }
             h4{
@@ -178,19 +185,30 @@ nav{
                 color: rgb(231, 231, 231);
                 letter-spacing: .1em;
                 margin-top: 1em;
-                @include mobile(400px){
+                text-align: center;
+                @include mobile(700px){
+                    width: 90%;
+                }
+                @include mobile(550px){
+                    width: 100%;
+                    font-size: .8em;
                     width: 80%;
-                    font-size: 1em;
                 }
             }
         }
         #heroAction{
             width: 100%;
             // background-color: yellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             margin-top: 1em;
             #hOptions{
                 width: 100%;
                 display: flex;
+                // background-color: red;
+                justify-content: center;
                 .hoption{
                     padding: .5em;
                     margin-top: 1em;
@@ -211,13 +229,23 @@ nav{
                 }
             }
             #hSearch{
-                width: 100%;
+                width: 50%;
                 display: flex;
                 background-color: #fff;
                 border-radius: 1em;
                 padding: 1em;
                 align-items: center;
                 margin-top: 1em;
+                @include mobile(750px){
+                  width: 80%;
+                }
+                @include mobile(500px){
+                    width: 95%;
+                  }
+                  @include mobile(40px){
+                    width: 98%
+                  }
+
                 button{
                     padding: 1em 2em;
                     letter-spacing: .1em;
@@ -242,19 +270,23 @@ nav{
     width: 100%;
     min-height:100vh;
     // background-color: #FF7F31;
+    border: 1px solid transparent;
     #services{
         width:90%;
         // height:20vh;
         position: relative;
         padding: 0 2em;
         margin: 0 auto;
-        margin-top: 4em;
+        margin-top: 1em;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         .sCards{
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 1em;
         }
         .sElm{
             width:30%;
@@ -265,12 +297,15 @@ nav{
             align-items: center;
             justify-content: center;
             flex-direction: column;
+           
             // &:first-child{
             //     border-left: none;
             // }
             .sPic{
-                width: 5vmax;
-                height: 5vmax;
+                width: 12vmax;
+                height: 8vmax;
+                border-radius: 1em;
+                overflow: hidden;
                 // background-color: green;
             }
             img{
@@ -289,7 +324,7 @@ nav{
         #serviceSlider{
             width: 100%;
             position: absolute;
-            padding: 0 2em;
+            // padding: 0 2em;
             top:50%;
             left: 50%;
             transform: translate(-50%,-50%);
