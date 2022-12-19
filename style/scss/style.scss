@@ -731,6 +731,53 @@ nav{
         }
        
     }
+    #partners{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4em 4em;
+        h2{
+            font-size: 2.5vw;
+            position: relative;
+            width: fit-content;
+            &:after{
+                content: "";
+                width: 50%;
+                height: 3px;
+                background-color: #000;
+                position: absolute;
+                bottom: -10%;
+                left: 0;
+            }
+            @include mobile(600px){
+                font-size: 1.5em;
+    
+            }
+            
+         }
+        #pList{
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4em;
+            // background-color: red;
+            margin-top: 4em;
+            justify-content: space-around;
+          .company{
+            width: 15%;
+            // height: 8vmax;
+            img{
+                width: 100%;
+                // height: 100%;
+                object-fit: contain;
+                filter: grayscale(100%);
+            }
+        }  
+        }
+        
+    }
     #customerReviews{
         width: 100%;
         display: flex;
@@ -868,11 +915,13 @@ footer{
             justify-content: center;
             h1{
                 color:#fff;
+                font-size: 3vmax;
 
             }
             p{
                 color:#fff;
                 margin-top: 1em;
+                font-size: 1.3vmax;
             }
             #fEmail{
                 display: flex;
@@ -906,18 +955,50 @@ footer{
 
     }
     #fBottom{
-        height:60vh;
+        height:30vmax;
         background-color: var(--footer);
-        padding: 1em;
+        // padding: 1em;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         #fInfo{
             display: flex;
             padding: 0 4em;
             justify-content: space-between;
             #cInfo{
                 width: 50%;
+                h2{
+                    color:#fff;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    font-size: 2vw;
+                    // @include mobile(550px){
+                    //     font-size: .8em;
+                    // }
+                }
+                p{
+                    color:#fff;
+                    margin-top: 1em;
+                    margin-bottom: 2em;
+                    width: 60%;
+                    font-weight: 300;
+                    line-height: 1.3em;
+                    font-size: .9vw;
+                    // @include mobile(550px){
+                    //     font-size: .6em;
+                    // }
+                }
+                i{
+                    padding:.5em;
+                    color:#fff;
+                    font-size: 1.5vw;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.363);
+                }
+                @include mobile(550px){
+                    width: 100%;
+                }
 
             }
             #fNavigations{
@@ -929,7 +1010,28 @@ footer{
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    h2{
+                        color:#fff;
+                        font-weight: 600;
+                        font-size: 2vw;
+                    }
+                    a{
+                        text-decoration: none;
+                        color:#fff;
+                        font-size: 1vw;
+                    }
+                 
                 }
+                @include mobile(550px){
+                    width: 100%;
+                    margin-top: 1em;
+                }
+            }
+            @include mobile(950px){
+                padding: 0 2em;
+            }
+            @include mobile(550px){
+                flex-direction: column;
             }
         }
         #fCopyRight{
@@ -942,6 +1044,9 @@ footer{
                 letter-spacing: .1em;
                 font-weight: 400;
 
+            }
+            @include mobile(950px){
+                padding: 0 2em;
             }
         }
     }
